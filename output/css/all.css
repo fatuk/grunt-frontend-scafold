@@ -5469,6 +5469,8 @@ body.modal-open,
 .clearfix,
 .banners,
 .banners-item_big .footer,
+.products-tiles__cell .content__row .content-header .options-wrapper,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl,
 .header,
 .header .top-menu__list,
 .main-panel,
@@ -5482,6 +5484,10 @@ body.modal-open,
 .banners:after,
 .banners-item_big .footer:before,
 .banners-item_big .footer:after,
+.products-tiles__cell .content__row .content-header .options-wrapper:before,
+.products-tiles__cell .content__row .content-header .options-wrapper:after,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:before,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:after,
 .header:before,
 .header:after,
 .header .top-menu__list:before,
@@ -5502,6 +5508,8 @@ body.modal-open,
 .clearfix:after,
 .banners:after,
 .banners-item_big .footer:after,
+.products-tiles__cell .content__row .content-header .options-wrapper:after,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:after,
 .header:after,
 .header .top-menu__list:after,
 .main-panel:after,
@@ -6049,6 +6057,10 @@ td.visible-print {
 .banners:after,
 .banners-item_big .footer:before,
 .banners-item_big .footer:after,
+.products-tiles__cell .content__row .content-header .options-wrapper:before,
+.products-tiles__cell .content__row .content-header .options-wrapper:after,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:before,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:after,
 .header:before,
 .header:after,
 .header .top-menu__list:before,
@@ -6069,6 +6081,8 @@ td.visible-print {
 .clearfix:after,
 .banners:after,
 .banners-item_big .footer:after,
+.products-tiles__cell .content__row .content-header .options-wrapper:after,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl:after,
 .header:after,
 .header .top-menu__list:after,
 .main-panel:after,
@@ -6083,6 +6097,8 @@ td.visible-print {
 .clearfix,
 .banners,
 .banners-item_big .footer,
+.products-tiles__cell .content__row .content-header .options-wrapper,
+.products-tiles__cell .content__row .content-header .options-wrapper .options dl,
 .header,
 .header .top-menu__list,
 .main-panel,
@@ -6102,6 +6118,12 @@ td.visible-print {
 .main-panel .phones__list li {
   float: left;
   padding: 10px;
+}
+@media (max-width: 1024px) {
+  .banners-item_big .footer .read-more-btn:before {
+    content: '';
+    display: none;
+  }
 }
 .menu_h,
 .header .top-menu__list {
@@ -6186,25 +6208,37 @@ td.visible-print {
   margin-top: 20px;
   background: #fff;
 }
-.products-tiles .products-tiles__cell {
+.products-tiles__cell {
   border-right: solid 1px #e6e8e9;
   border-top: solid 1px #e6e8e9;
   text-align: center;
   padding: 0 20px;
 }
-.products-tiles .content {
-  padding: 0;
-  height: 100%;
+.products-tiles__cell .content__row .content-header .img {
   width: 100%;
 }
-.products-tiles .content__cell__name {
-  text-align: left;
-  margin: 7px 0 9px;
+.products-tiles__cell .content__row .content-header .title {
+  font-size: 20px;
   font-weight: normal;
-  min-height: 55px;
 }
-.products-tiles .content__cell__options {
-  text-align: left;
+.products-tiles__cell .content__row .content-header .options-wrapper .options {
+  width: 75%;
+  float: left;
+}
+.products-tiles__cell .content__row .content-header .options-wrapper .options .name {
+  width: 43%;
+  float: left;
+}
+.products-tiles__cell .content__row .content-header .options-wrapper .options .value {
+  width: 43%;
+  float: left;
+}
+.products-tiles__cell .content__row .content-header .options-wrapper .review {
+  width: 20%;
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 /* Main page layout */
 body {
@@ -6258,10 +6292,4 @@ body {
 .main-panel .checkout {
   float: right;
   padding: 15px 20px;
-}
-@media (max-width: 1024px) {
-  .banners-item_big .footer .read-more-btn:before {
-    content: '';
-    display: none;
-  }
 }

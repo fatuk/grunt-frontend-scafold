@@ -7,29 +7,71 @@
 		background: #fff;
 	}
 
-	.products-tiles__cell {
+	&__row {
+
+	}
+
+	&__cell {
 		border-right: solid 1px #e6e8e9;
 		border-top: solid 1px #e6e8e9;
 		text-align: center;
 		padding: 0 20px;
-	}
 
-	.content {
-		padding: 0;
-		height: 100%;
-		width: 100%;
+		.content {
+			&__row {
+				.content-header {
+					.link {
 
-		&__cell {
-			&__name {
-				text-align: left;
-				margin: 7px 0 9px;
-				font-weight: normal;
-				min-height: 55px;
-			}
+					}
 
-			&__options {
-				text-align: left;
+					.img {
+						width: 100%;
+					}
+
+					.title {
+						font-size: 20px;
+						font-weight: normal;
+					}
+
+					.options-wrapper {
+						&:extend(.clearfix all);
+
+						.options {
+							width: 75%;
+							float: left;
+
+							dl {
+								&:extend(.clearfix all);
+							}
+
+							.name {
+								width: 43%;
+								float: left;
+							}
+
+							.value {
+								width: 43%;
+								float: left;
+							}
+						}
+
+						.review {
+							width: 20%;
+							float: right;
+							list-style: none;
+							padding: 0;
+							margin: 0;
+						}
+					}
+
+
+				}
+
+				.content-footer {
+
+				}
 			}
 		}
 	}
+	
 }
